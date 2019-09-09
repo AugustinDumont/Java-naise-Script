@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const body = document.querySelector("body");
+    const random = (X) => {
+        body.style.backgroundColor = X;
+    };
+    document.getElementById("run").addEventListener("click", () => {
+        let color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+        random(color);
+    });
+
 })();

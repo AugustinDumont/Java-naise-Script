@@ -8,11 +8,17 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+/*(let i = 0; i < 21; i++)*/
 
 (() => {
-    // to get the value of an input: document.getElementById("element-id").value
+  // to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("run").addEventListener("click", () => {
-        // your code here
-    });
+  document.getElementById("run").addEventListener("click", () => {
+    let myNumber = document.getElementById("number").value.map(Number);
+    let i = myNumber - 1;
+    for (i; i > 0; i--) {
+      myNumber = myNumber * i;
+      console.log(myNumber);
+    }
+  });
 })();

@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const body = document.querySelector("body"); /* On donne un nom "body" à l'élément HTML "body" afin de pouvoir l'utiliser */
+    const changeColor = (X) => {   /*  On crée la fonction changeColor avec le paramètre X qu'on appellera plus tard. X sert à créer la fonction, rien de plus" */
+        body.style.backgroundColor = X;
+    };
+
+
+    document.getElementById("run").addEventListener("click", () => {  /* Lorsqu'on click sur le run */
+        let color = document.getElementById("color").value; /* la couleur de l'input */
+        changeColor(color); /* la couleur de l'input est appelée dans la fonction changeColor. Elle remplace le "X". */ 
+    });
 })();

@@ -12,7 +12,15 @@
 (() => {
     // to get the value of an input: document.getElementById("element-id").value
 
+    function compare(x, y) {
+        return y - x;
+    }
+
     document.getElementById("run").addEventListener("click", () => {
-        // your code here
+
+        let tableau = document.getElementById("numbers").value.split(",").map(Number);
+        tableau.sort(compare);
+        console.log(tableau);
+        document.getElementById("numbers").value = tableau;
     });
 })();
