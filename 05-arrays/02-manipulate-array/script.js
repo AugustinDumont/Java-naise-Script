@@ -23,5 +23,5 @@
         "cerise",
     ];
 
-    // your code here
+    fruits.
 })();

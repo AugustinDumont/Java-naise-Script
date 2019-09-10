@@ -25,5 +25,11 @@
         "cerise",
     ];
 
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(fruits[3]);
+    });
+
+
+
     // your code here
 })();

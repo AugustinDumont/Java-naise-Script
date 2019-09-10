@@ -10,6 +10,27 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
+
+    let date = new Date();
+    /* new Date est une classe à partir de laquelle je peux appeler des méthodes comme date.getHours ou date.getMinutes */
+    console.log(date);
+
+    let heures = date.getHours();
+    console.log(heures);
+    heures = 19;
+
+    if (heures > 17) {
+        document.getElementById("target").innerHTML = "Bonsoir";
+    } else {
+        document.getElementById("target").innerHTML = "Bonjour";
+    };
+
+
+
+
 })();
+
+
+
+// to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+// your code here
