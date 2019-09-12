@@ -22,5 +22,8 @@
         "Lucas",
     ]);
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(people.size); /* On transforme length par size !!!!!! */
+        console.log(people.has('Alexandre') ? 'oui' : 'non'); /* On transforme includes par has !!!!!!!!!!*/
+    });
 })();

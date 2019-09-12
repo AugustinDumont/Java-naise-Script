@@ -25,9 +25,9 @@
         "cerise",
     ];
 
-    document.getElementById('run').onclick = () => {
+    document.getElementById('run').addEventListener("click", () => {
         console.log("Le fruits pomme " + (fruits.includes('pomme') ? 'est ' : ' n est pas') + "dans la liste. ");
-    };
+    });
 })();
 
 /* La fonction "includes" se rapporte à une valeur de type boléen : true ; false que l'on peut remplacer par ce que l'on souhaite. 

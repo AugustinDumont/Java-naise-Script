@@ -35,105 +35,105 @@
 
 
 
-  /*  ALESS
-  
-  
-  (() => {
-        const run = () => {
-          const table = Array.from(document.querySelectorAll("table td"));
-      
-          let numbers = [],
-            sum = 0;
-      
-          // GET RANDOM ARRAY
-          for (let i = 0; i < table.length; i++) {
-            const number = Math.floor(Math.random() * 100);
-            numbers.push(number);
-            sum += number;                  Somme générée lors de la création du tableau. A chaque nombre aléatoires créés, ils sont ajoutés dans la variable sum. 
-          }
-      
-          // Add numbers to table
-          for (let i = 0; i < table.length; i++) {   Ajout dans le HTML = 10 tables du HTML se transforme par les 10 nombres
-            table[i].innerHTML = numbers[i];
-          }
-      
-          // AVG, MIN, MAX, SUM
-          document.getElementById("min").innerHTML = Math.min(...numbers);
-          document.getElementById("max").innerHTML = Math.max(...numbers);
-          document.getElementById("sum").innerHTML = sum;
-          document.getElementById("average").innerHTML = sum / numbers.length;
-        };
-      
-        document
-          .getElementById("run")
-          .addEventListener("click", () => (run(), false));
-      })(); */
+/*  ALESS
+
+
+(() => {
+      const run = () => {
+        const table = Array.from(document.querySelectorAll("table td"));
+    
+        let numbers = [],
+          sum = 0;
+    
+        // GET RANDOM ARRAY
+        for (let i = 0; i < table.length; i++) {
+          const number = Math.floor(Math.random() * 100);
+          numbers.push(number);
+          sum += number;                  Somme générée lors de la création du tableau. A chaque nombre aléatoires créés, ils sont ajoutés dans la variable sum. 
+        }
+    
+        // Add numbers to table
+        for (let i = 0; i < table.length; i++) {   Ajout dans le HTML = 10 tables du HTML se transforme par les 10 nombres
+          table[i].innerHTML = numbers[i];
+        }
+    
+        // AVG, MIN, MAX, SUM
+        document.getElementById("min").innerHTML = Math.min(...numbers);
+        document.getElementById("max").innerHTML = Math.max(...numbers);
+        document.getElementById("sum").innerHTML = sum;
+        document.getElementById("average").innerHTML = sum / numbers.length;
+      };
+    
+      document
+        .getElementById("run")
+        .addEventListener("click", () => (run(), false));
+    })(); */
 
 
 (() => {
 
 
-    document.getElementById('run').onclick = () => {
+  document.getElementById('run').addEventListener("click", () => {
 
-        let arr = randomNumbersArray();
-        insertNumberIntoHtml(arr);
-        document.getElementById('min').innerHTML = nbrMin(arr);
-        document.getElementById('max').innerHTML = nbrMax(arr);
-        let sum = nbrSum(arr);
-        document.getElementById('sum').innerHTML = sum;
-        document.getElementById('average').innerHTML = nbrAvg(arr, sum);
-    };
-
-
-    /* 1 */
-
-    const randomNumbersArray = () => {
-        let arr = [];
-        for (let i = 0; i < 10; i++) {
-            arr.push(Math.floor(Math.random() * 100));
-        }
-        return arr;
-    };
-
-    /* 2 */
+    let arr = randomNumbersArray();
+    insertNumberIntoHtml(arr);
+    document.getElementById('min').innerHTML = nbrMin(arr);
+    document.getElementById('max').innerHTML = nbrMax(arr);
+    let sum = nbrSum(arr);
+    document.getElementById('sum').innerHTML = sum;
+    document.getElementById('average').innerHTML = nbrAvg(arr, sum);
+  });
 
 
-    /* Ancienne écriture où Math.min doit être retourné */
-    const nbrMin = (arr) => {
-        return Math.min(...arr);
-    };
+  /* 1 */
+
+  const randomNumbersArray = () => {
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+      arr.push(Math.floor(Math.random() * 100));
+    }
+    return arr;
+  };
+
+  /* 2 */
 
 
-
-    /* Nouvelle écriture où Math.max est directement retourné */
-    const nbrMax = (arr) => Math.max(...arr);
+  /* Ancienne écriture où Math.min doit être retourné */
+  const nbrMin = (arr) => {
+    return Math.min(...arr);
+  };
 
 
 
-    /* Nouvelle écriture où Math.max est directement retourné */
-    const nbrSum = (arr) => arr.reduce((a, b) => a + b, 0)
-
-
-    /* Ancienne écriture où Math.min doit être retourné
-        const nbrSum = (arr) => {
-        return arr.reduce((a, b) => a + b, 0)
-    }; */
+  /* Nouvelle écriture où Math.max est directement retourné */
+  const nbrMax = (arr) => Math.max(...arr);
 
 
 
-    /* Nouvelle écriture où Math.max est directement retourné */
-    const nbrAvg = (arr, sum) => sum / arr.length;
-
-    /* Dans fonction nbrAvg, j'utilise les paramètres retournés arr et la valeur sum pour las diviser par le nombre de nombres dans le tableau */
+  /* Nouvelle écriture où Math.max est directement retourné */
+  const nbrSum = (arr) => arr.reduce((a, b) => a + b, 0)
 
 
+  /* Ancienne écriture où Math.min doit être retourné
+      const nbrSum = (arr) => {
+      return arr.reduce((a, b) => a + b, 0)
+  }; */
+
+
+
+  /* Nouvelle écriture où Math.max est directement retourné */
+  const nbrAvg = (arr, sum) => sum / arr.length;
+
+  /* Dans fonction nbrAvg, j'utilise les paramètres retournés arr et la valeur sum pour las diviser par le nombre de nombres dans le tableau */
 
 
 
 
-    /* 3.  */
 
-    /* const insertNbrIntoHtml = arr => {
+
+  /* 3.  */
+
+  /* const insertNbrIntoHtml = arr => {
 
         for (let i = 1; i <= arr.length; i++) {
 
@@ -144,16 +144,17 @@
  */
 
 
-    const insertNumberIntoHtml = arr => {
+  const insertNumberIntoHtml = arr => {
 
-        let id = document.querySelectorAll(".material td"); /* node list (noeuds du domaine) récupérée avec tous les td   (.material, car classe)  (td car type de balise) */
-        let i = 0;              /* Création d'un incrément à utiliser pour parcourir les différents td */
-        Array.from(id)     /* transformation de la node list en tableau array */
-        .map(td => {      /* .map = forEach = boucle for    .map suivi de fonction   td = paramètre   */
-            td.innerText = arr[i++];   /* on remplace 1 à 1 les éléments td de html par les valeurs du tableau arr */
-        });
+    let id = document.querySelectorAll(".material td"); /* node list (noeuds du domaine) récupérée avec tous les td   (.material, car classe)  (td car type de balise) */
+    let i = 0; /* Création d'un incrément à utiliser pour parcourir les différents td */
+    Array.from(id) /* transformation de la node list en tableau array */
+      .map(td => {
+        /* .map = forEach = boucle for    .map suivi de fonction   td = paramètre   */
+        td.innerText = arr[i++]; /* on remplace 1 à 1 les éléments td de html par les valeurs du tableau arr */
+      });
 
-    }
+  }
 
 
 
@@ -219,8 +220,8 @@ Je prépare les différentes fonctions à savoir :
             var total = [0, 1, 2, 3].reduce((a, b)=> a + b,0);    total == 6
 
             reduce suivi de la fonction avec les paramètre a et b
-            a + b = acumulateur... = addition = reduce fait comprendre que qu'il devra poursuivre l'addition avec les autres. 
-            O = valeur initiale = index initial
+            a + b = acumulateur... = addition = reduce ajoute la valeur de b (objet) à a, qui au départ = 0.  
+            O = valeur initiale
 
 - Trouver la moyenne de tous les nombres
 */

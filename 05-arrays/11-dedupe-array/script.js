@@ -27,5 +27,27 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener("click", () => {
+
+        /*  console.log(new Set(fruits)); */
+        /* valeurs stockées dans Set; on ne peut retrouver plusieurs fois la même valeur dans Set*/
+        /*  console.log(Array.from(new Set(fruits))); */
+        /*  valeurs stockées dans Array */
+
+
+        /* The biggest difference between an Array & Set is that Arrays can have duplicate values whereas Sets cannot. The other big difference is that data in an array is ordered by index whereas Sets use keys & the elements are iterable in the order of insertion. */
+
+
+
+        let newArray = [...fruits];
+        console.log(newArray);
+
+        newArray = fruits.filter((fruit, index) => fruits.indexOf(fruit) >= index);
+        console.log(newArray);
+
+        /* la fonction filtre va boucler dans le tableau fruits. On s'intéresse à chacun des items qu'on appelle fruit et à l'index */
+        /*  la boucle va agir sur l'indexOf... On va prendre chaque fruit, et comparer l'index de chaque fruit avec l'index du premier même fruit dans le tableau, car indexOf fait ressortir le premier index de l'item en question.*/
+
+    });
+
 })();
