@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    const people = [
-        {
+    const people = [{
             firstname: "Grenville",
             lastname: "Stive",
             age: 64,
@@ -88,5 +87,9 @@
         },
     ];
 
-    // your code here
+    document.getElementById('run').onclick = () => {
+        let totalAgePeople = people.reduce((a, b) => a + b.age, 0); /*  (accumulateur, objet) .reduce prends 2 paramètres alors que .map prend 1 paramètre */
+        console.log(totalAgePeople);
+    };
+
 })();
