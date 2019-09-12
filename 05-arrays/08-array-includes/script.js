@@ -25,5 +25,20 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById('run').onclick = () => {
+        console.log("Le fruits pomme " + (fruits.includes('pomme') ? 'est ' : ' n est pas') + "dans la liste. ");
+    };
 })();
+
+/* La fonction "includes" se rapporte à une valeur de type boléen : true ; false que l'on peut remplacer par ce que l'on souhaite. 
+Il suffit de rajouter les deux propositions antagonistes à la suite de la fonction.  */
+
+
+/*  AUTRE EXEMPLE 
+
+var sentence = 'The quick brown fox jumps over the lazy dog.';
+
+var word = 'fox';
+
+console.log(`The word "${word}" ${sentence.includes(word)? 'is' : 'is not'} in the sentence`);
+// expected output: "The word "fox" is in the sentence" */

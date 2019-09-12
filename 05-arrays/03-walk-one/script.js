@@ -25,5 +25,16 @@
         "cerise",
     ];
 
-    // your code here
+    let x = 0;   /* Je crée une variable pour référencer mon index x = 0 = premier élément de mon tableau */
+
+    function boucleFor() {
+        for (let i = 0; i < fruits.length - 1; i++) {   /* Ma boucle ne sert qu'à dire que je parcours le tableau */
+            console.log(fruits[x]);  /*  je réutilise ma variable x pour dire que j'affiche le premier élément et ensuite j'incrémente  */
+            x++;
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", () => {
+        boucleFor();
+    })
 })();

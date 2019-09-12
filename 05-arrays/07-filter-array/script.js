@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    const people = [
-        {
+    const people = [{
             firstname: "Dreddy",
             lastname: "Nussgen",
             age: 70,
@@ -88,5 +87,23 @@
         },
     ];
 
-    // your code here
+    let newTab = [];
+
+    document.getElementById("run").onclick = () => {
+        for (let person of people) {
+            /* J'ajoute un paramètre "person" au tableau "people" pour me permettre d'y rechercher des données ciblées. Person représente un groupe de 3 valeurs = un index */
+            if (person.age >= 18) {
+
+                newTab.push(person)
+            }; /* Si j'ajoute l'age d'un index person > 18 alors je le push dans mon tableau initialement créé newTab */
+        }
+        console.log(newTab);
+    };
+
 })();
+
+/* POUR tatatatatatata  (Nous permet de cibler dans le tableau)
+
+Si tatatatatatata
+
+ALORS tatatatatata */

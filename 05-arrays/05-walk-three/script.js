@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    const people = [
-        {
+    const people = [{
             firstname: "Garald",
             lastname: "Freschi",
             email: "gfreschi0@discuz.net",
@@ -38,5 +37,17 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+
+        people.forEach((d) => {
+                                            /* Dans cet exercce, j'utilise une fonction fléchée, je ne suis pas obligé de réécrire "function". Le paramètre "d" pourrait être remplacé par n'importe quelle autre appellation. Il se réfère au "people.forEach"  */
+            console.log(d.lastname);        /*   et permettra de le réutiliser" */
+        });
+
+
+    });
+
+
+
 })();

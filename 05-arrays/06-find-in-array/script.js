@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    const people = [
-        {
+    const people = [{
             firstname: "Bradford",
             lastname: "Coldbath",
             email: "bcoldbath0@wired.com",
@@ -88,5 +87,30 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        console.log("click");
+
+        people.forEach((person, index) => {
+            /*  Je lance ma fonction people.forEach avec les paramètres "person" (que je crée) et "index" (qui existe de base). */
+            if (
+                person.firstname.toLowerCase() === "jean" && person.lastname.toLowerCase() === "dupont" /* je lance ma condition en réutilisant le paramètre person pour rechercher .firstname et .lastname. J'utilise toLowercase pour éviter tout problème de synthaxe.  */
+            ) {
+                console.log(person.email);
+                console.log(index);
+            }
+        });
+    });
 })();
+
+
+
+
+/* for (let i = 0; i < people.length; i++) {                Je lance une boucle qui démare de l'index 0 jusqu'à la la fin du tableau. Un élement = people[i] = premeir index du tableau people = à chaque fois 3 valeurs.
+    if (
+      people[i].firstname.toLowerCase() === 'jean' &&       J'ajoute ma condition en atteignant en désignant les . firstname et lastname de chaque élément par people[i] ou i = index. 
+      people[i].lastname.toLowerCase() === 'dupont'
+    ) {
+      console.log(people[i].email);
+      console.log(i);
+    }
+  } */

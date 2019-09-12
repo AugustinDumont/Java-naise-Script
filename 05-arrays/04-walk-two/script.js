@@ -25,5 +25,20 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.forEach(function (item, index, array) {
+                                                /* forEach(function(item,index,array{console.log(item, index, array))) càd, on fait tourner la boucler dans les items, les index et le array */
+            console.log(item, index, array);    /* item = nom du fruits / index = numéro / array = tout le tableau auquel il appartient */
+        });
+
+    })
 })();
+
+/* ou
+
+document.getElementById("run").addEventListener("click", () => {
+    fruits.forEach(function (fruit) {    /* je fais passer ma boucle dans chaque élement du tableau que je nomme fruit et je fais le console.log de fruit */                         
+ /*        console.log(fruit);    
+    });
+
+}) */ 
