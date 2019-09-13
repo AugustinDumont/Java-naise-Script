@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener("click", () => {
+        let persona = {
+            firstname: "Anita",
+            lastname: "Boundanochao",
+            age: "31",
+            city: "Rio de Janeiro",
+            country: "Brasil"
+        };
+        console.log(persona);
+    });
+
 })();
+
+/* On sépare les propriétés de l'objet par des virgules */
