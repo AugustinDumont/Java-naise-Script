@@ -74,7 +74,7 @@
         if (oiseauX.fem) resultat.innerHTML = "La " + oiseauX.name + " " + adjX + "e";
         else resultat.innerHTML = "Le " + oiseauX.name + " " + adjX;
 
-        /*  avec langage PHP et ancienne écriture de la condition: 
+        /*  avec langage Template String et ancienne écriture de la condition: 
 
         if (oiseauX.fem){
             resultat.innerHTML = `La ${oiseauX.name} ${adjX}e`;
