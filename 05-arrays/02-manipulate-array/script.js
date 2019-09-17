@@ -23,10 +23,32 @@
     "cerise"
   ];
 
-  fruits.shift();
-  fruits.pop();
-  fruits.unshift("banane");
-  fruits.push("kiwi");
-
+  fruits.shift(); /* supprime le premier élément du tableau */
   console.log(fruits);
+  fruits.pop(); /* supprime le dernier élément du tableau */
+  console.log(fruits);
+  fruits.unshift("banane"); /* ajoute un élément au début du tableau */
+  console.log(fruits);
+  fruits.push("kiwi"); /* ajoute un élément à la fin du tableau */
+  console.log(fruits);
+  fruits.splice(1, 5); /* supprime 5 éléments à partir de l'index 1 */
+  console.log(fruits);
+  let newFruits = fruits.slice(); /* fonction qui crée un nouveau tableau qui contient les éléments frutis */
+  console.log(newFruits);
+
+
+  function laTotal(e) {
+    e.shift();
+    e.pop();
+    e.unshift("gâteau");
+    return e;
+  }
+
+  console.log(laTotal(newFruits));
+
+
+
+
+
+
 })();

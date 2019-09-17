@@ -27,22 +27,23 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     const performOperation = operation => {
-        let premierNbre = document.getElementById("op-one").value;
-        let deuxiemeNbre = document.getElementById("op-two").value;
+        let premierNbre = parseFloat(document.getElementById("op-one").value);
+        let deuxiemeNbre = parseFloat(document.getElementById("op-two").value);
+        /* parseFloat est approprié, car prend même les nombres décimaux */
         let resultat;
 
         switch (operation) {
             case "addition":
-                resultat = parseInt(premierNbre) + parseInt(deuxiemeNbre);
+                resultat = (premierNbre) + (deuxiemeNbre);
                 break;
             case "soustraction":
-                resultat = parseInt(premierNbre) - parseInt(deuxiemeNbre);
+                resultat = (premierNbre) - (deuxiemeNbre);
                 break;
             case "multiplication":
-                resultat = parseInt(premierNbre) * parseInt(deuxiemeNbre);
+                resultat = (premierNbre) * (deuxiemeNbre);
                 break;
             case "division":
-                resultat = parseInt(premierNbre) / parseInt(deuxiemeNbre);
+                resultat = (premierNbre) / (deuxiemeNbre);
                 break;
         }
         alert(resultat);

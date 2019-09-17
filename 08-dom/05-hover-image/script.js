@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const img = document.getElementsByTagName('img')[0]; /* on sélectionne la première image qui le tag img */
+
+    img.addEventListener('mouseover', functionMouseOver); /* on ajoute un événement au survol, "mouseover" = nom de l'événement et functionMouseOver = nom de la fonction appelée lors de l'évnement */
+    img.addEventListener('mouseout', functionMouseOut);
+
+    let firstImg = img.src;
+
+    function functionMouseOver() {
+        img.src = img.getAttribute('data-hover')
+    }
+
+    function functionMouseOut() {
+        img.src = firstImg;
+    }
 })();

@@ -12,10 +12,13 @@
 (() => {
     var reponse;
     reponse = prompt("Voulez-vous du gateau?");
-    if (reponse == "oui") {
+    if (reponse === "oui") {
         alert("Bien filston !");
     } else {
         alert("Bouuuuuuh");
     }
 
 })();
+
+/* Pour éviter que l'utilisateur réponde positivement, par une autre réponse que "oui"
+=> utiliser checkBox */

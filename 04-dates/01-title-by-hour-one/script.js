@@ -17,7 +17,7 @@
 
     let heures = date.getHours();
     console.log(heures);
-    heures = 19;
+    /* heures = 19; */
 
     if (heures > 17) {
         document.getElementById("target").innerHTML = "Bonsoir";

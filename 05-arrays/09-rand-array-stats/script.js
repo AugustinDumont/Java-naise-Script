@@ -84,7 +84,10 @@
     document.getElementById('average').innerHTML = nbrAvg(arr, sum);
   });
 
-
+  Array.from(id) /* transformation de la node list en tableau array */
+  .map(td => {
+    /* .map = forEach = boucle for    .map suivi de fonction   td = paramètre   */
+    td.innerText = arr[i++]; /
   /* 1 */
 
   const randomNumbersArray = () => {

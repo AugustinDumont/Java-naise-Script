@@ -18,5 +18,24 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+
+
+    let img = document.getElementsByTagName('img')[0]; /* variable img = première img dont le tag est img */
+    let i = 0;
+
+    // au clic, on augmente l'incrémenteur de 1. 
+
+    document.getElementById('next').addEventListener("click", () => {
+        i++;
+
+        // revenir première photo une fois qu'elles ont toutes défilé
+
+        if (i >= gallery.length) {
+            i = 0;
+        }
+
+        // faire varier les sources de l'image en fonction du tableau gallery
+        img.src = gallery[i];
+    });
+
 })();

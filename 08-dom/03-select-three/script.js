@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    /*  let targets = document.getElementsByClassName("target");
+    for (elem of targets) {
+        elem.innerHTML = 'owned';
+})();
+
+ */
+
+    const targets = document.querySelectorAll("p.target");
+    targets.forEach(e => {
+        e.innerHTML = "owned";
+    });
 })();

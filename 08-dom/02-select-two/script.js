@@ -9,6 +9,9 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
+/* Sélectionne la balise p dont la classe est "target": remplace son contenu par "owned". */
+
 (() => {
-    // your code here
+    document.querySelector("p.target").innerHTML = "owned"; /* p.target = comme écriture css */
 })();

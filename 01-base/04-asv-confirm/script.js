@@ -11,17 +11,15 @@
 
 (() => {
 
-    let age = prompt("Quel est votre âge?");
-    let sexe = prompt("Etes-vous un homme ou une femme?");
-    let ville = prompt("De quelle ville provenez-vous?");
-    let confirmation = confirm("Vous avez " + age + ". Vous êtes un(e) " + sexe + ". Vous venez de " + ville + ". Confirmez-vous ces informations?");
+    let confirmation;
 
     do {
-        age = prompt("Quel est votre âge?");
-        sexe = prompt("Etes-vous un homme ou une femme?");
-        ville = prompt("De quelle ville provenez-vous?");
+        let age = prompt("Quel est votre âge?");
+        let sexe = prompt("Etes-vous un homme ou une femme?");
+        let ville = prompt("De quelle ville provenez-vous?");
+        let confirmation = confirm("Vous avez " + age + ". Vous êtes un(e) " + sexe + ". Vous venez de " + ville + ". Confirmez-vous ces informations?");
     }
 
-    while (confirmation == false)
+    while (confirmation === false);
 
 })();

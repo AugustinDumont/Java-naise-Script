@@ -13,12 +13,12 @@
     document.getElementById('run').addEventListener("click", () => {
         let persona = {
             firstname: "Anita",
-            lastname: "Boundanochao",
+            lastname: "Bundanochao",
             age: "31",
             city: "Rio de Janeiro",
             country: "Brasil"
         };
-        console.log(persona);
+        console.table(persona);
     });
 
 })();

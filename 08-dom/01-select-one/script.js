@@ -9,6 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
+
+/* Sélectionne la balise dont l'id est "target": remplace son contenu par "owned". */
+
 (() => {
-    // your code here
+
+    document.getElementById("target").innerHTML = "owned";
+
 })();

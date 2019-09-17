@@ -26,8 +26,7 @@
     document.getElementById('run').addEventListener("click", () => {
         fruits.delete('pomme');
         fruits.delete('cerise');
-        fruits.add('banane');
-        fruits.add('kiwi');
+        fruits.add('banane').add('kiwi');
         console.log(fruits);
     });
 })();

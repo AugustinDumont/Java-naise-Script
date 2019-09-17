@@ -14,14 +14,16 @@
         constructor(firstname, lastname) {
             this.firstname = firstname;
             this.lastname = lastname;
-            }
-        };
-        Person.hello = sayHello() {
-            return "Hello " + this.firstname + " " + this.lastname
+        }
+
+        sayHello(){   /* ou sayHello = () =>{ */
+            return "Hello, " + this.firstname + " " + this.lastname;
+            /* return `Hello, ${this.firstname} ${this.lastname}`; */
+        }
     }
 
     document.getElementById('run').addEventListener("click", () => {
         let gus = new Person("Augustin", "Dumont");
-        console.log(gus);
+        console.log(gus.sayHello());
     });
 })();

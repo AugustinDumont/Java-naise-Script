@@ -54,7 +54,7 @@
     };
 
     document.getElementById('run').addEventListener("click", () => {
-        for (let i = 0; i < computers.length; i++) {
+        for (let i = 0; i < computers.length; i++) {  /* peut être remplacé par for Each */
             if (typeof computers[i].available === 'undefined')
                 computers[i].available = defaultProps.available;
             if (typeof computers[i].user === 'undefined')
@@ -65,6 +65,10 @@
 
         console.log(computers);
     });
+
+    /* utiliser la méthode hasownproperty à la place de undefined */
+
+    /* utiliser la fonction "Object.asign().defaultProps, computers[i]"     défaultProps = source   , computers = destinations */
 
     /* 
     

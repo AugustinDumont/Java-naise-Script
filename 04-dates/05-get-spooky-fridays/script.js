@@ -1,5 +1,3 @@
-import { DH_NOT_SUITABLE_GENERATOR } from "constants";
-
 /* becode/javascript
  *
  * /04-dates/05-get-spooky-fridays/script.js - 4.5: calcul des vendredi 13
@@ -24,12 +22,12 @@ import { DH_NOT_SUITABLE_GENERATOR } from "constants";
             console.log(date);
             if (date.getDay() == 5) {
                 lesfriday.push(mois[i]);
-                console.log(i + 1);
+                console.log(i + 1); /* +1 car index démarre de 0 et j'aurai à chaque fois un mois d'avance */
             }
         }
         console.log(lesfriday);
 
-        alert("L'année " + year + " contient des vendredi 13 durant les mois de " + lesfriday.join("-"));
+        alert("L'année " + year + " contient des vendredi 13 durant les mois de " + lesfriday.join("-")); /* .join() => concaténat des items d'un tableau, par défaut séparé par une virgule */
 
     }
 

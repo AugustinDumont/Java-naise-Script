@@ -13,7 +13,7 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     function compare(x, y) {
-        return y - x;
+        return x - y; /* ordre croissant     return y - x   ordre décroissant */
     }
 
     document.getElementById("run").addEventListener("click", () => {

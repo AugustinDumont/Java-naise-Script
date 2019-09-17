@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let target = document.getElementById('target');
+    let tableau = document.createElement('table');
+    target.appendChild(tableau);
+
+
+    for (let i = 1; i <= 10; i++) {
+        /* boucle for de 10 */
+        let row = document.createElement('tr'); /* on déclare la variable row = création de rangée */
+        row.innerHTML = 10 * (i); /*à chaque tour de boucle on ajoute une rangée qu'on modifie directement par la multiplication *10  */
+        tableau.appendChild(row); /* on attribue la "noeud" rangée ajouté dans le html au "noeud" tableau */
+    }
 })();
