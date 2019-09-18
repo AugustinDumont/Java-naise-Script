@@ -12,6 +12,9 @@
 (() => {
     let target = document.getElementById('target');
     let tableau = document.createElement('table');
+
+    tableau.setAttribute("style", "border:2px");
+
     target.appendChild(tableau);
 
 
@@ -22,3 +25,6 @@
         tableau.appendChild(row); /* on attribue la "noeud" rangée ajouté dans le html au "noeud" tableau */
     }
 })();
+
+/* Il existe aussi l'utilsation de la fonction "insertRow() et "insertCell() */
+

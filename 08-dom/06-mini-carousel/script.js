@@ -26,13 +26,14 @@
     // au clic, on augmente l'incrémenteur de 1. 
 
     document.getElementById('next').addEventListener("click", () => {
-        i++;
+
 
         // revenir première photo une fois qu'elles ont toutes défilé
 
         if (i >= gallery.length) {
             i = 0;
         }
+        i++;
 
         // faire varier les sources de l'image en fonction du tableau gallery
         img.src = gallery[i];

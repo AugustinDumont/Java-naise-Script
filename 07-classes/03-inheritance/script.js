@@ -14,25 +14,28 @@
         sayHello() {
             return `${this.constructor.greeting}! I'm ${this.name}!`;
             /* Obligation du return pour pouvoir utiliser la fonction sayHello dans les instaces */
-
+        }
+        constructor(name) {
+            /* Tous les animaux ont un nom */
+            this.name = name;
         }
     }
 
     class Cat extends Animal {
         static greeting = "Miaaaaaaaouw mia miaouuuuw"; /* Tous les Cat sont des Animal. Static greeting, tous les Cat ont un greeting, et quel que soit le cat, c'est toujorus mia mia miaou. Le greeting est static */
-        constructor(name) {
-            super();
-            /* super() renvoi aux propriétés de la class Animal, entre autres d'accéder à la fonction sayHello */
-            this.name = name; /* Tous les chats ont un nom, mais un nom différent */
+        constructor(name, raceCat) {
+            super(name);
+            /* super() renvoi aux constructeurs de la class Animal */
+            /* Tous les chats ont un nom, mais un nom différent */
+            this.raceCat = raceCat; /* receCat n'appartient que à Cat */
         }
     }
 
     class Dog extends Animal {
         static greeting = "Wouf wouf wouf ahouuuuuuu";
-
         constructor(name) {
-            super();
-            this.name = name;
+            super(name);
+
         }
     }
 

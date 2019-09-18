@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  let input = document.getElementById("pass-one");
+
+  input.oninput = () => {
+    document.getElementById("counter").innerHTML = input.value.length + "/10";
+    input.value = input.value.substr(0, 9);
+  };
 })();
+
+/* problème : la fonction est appelée à chaque input...  = perte d'efficience */

@@ -18,7 +18,7 @@
 
  */
 
-    const targets = document.querySelectorAll("p.target");
+    const targets = document.querySelectorAll(".target");
     targets.forEach(e => {
         e.innerHTML = "owned";
     });

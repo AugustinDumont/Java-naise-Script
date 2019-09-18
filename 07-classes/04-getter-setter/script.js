@@ -51,13 +51,13 @@ l'objectif est d'obtenir console.log(gus.name) au lieu de console.log(gus.name()
         }
 
         get name() {
-            /* get (from the inside) permet d'utiliser la methode fullName() comme une propriété */
+            /* get (from the inside) permet d'utiliser la methode name() comme une propriété */
             return `${this.firstname} ${this.lastname}`
         }
 
         set name(value) {
             /* set (from the outside) va permettre d'envoyer vers l'objet. Nous sommes obligés d'utiliser un paramètre, que nous avons ici appeler "value". Value correspond à un "string" et à ce qui sera à droite de gus.fullName =("Augustin", "Dumont") */
-            const fullName = value.split(" "); /* value.split va retourner un array qu'on appelle newName dans lequel on retrouve deux éléments : firstname et lastname */
+            const fullName = value.split(" "); /* value.split va retourner un array qu'on appelle fullName dans lequel on retrouve deux éléments : firstname et lastname */
             this.firstname = fullName[0];
             this.lastname = fullName[1];
         }

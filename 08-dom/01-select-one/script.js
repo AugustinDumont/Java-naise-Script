@@ -16,5 +16,7 @@
 (() => {
 
     document.getElementById("target").innerHTML = "owned";
+    /* document.getElementById("target").innerText = "owned"; */
+    /* Peut être plus approprié si il ne s'agit que du texte */
 
 })();

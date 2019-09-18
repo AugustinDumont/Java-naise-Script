@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let input = document.getElementById('pass-one');
+    let validity = document.getElementById('validity');
+    let minLength = 8;
+    let hasTwoDigits = /\d.*\d/; // Expression régulière (RegEx)  MATTER TUTORIEL PHP OPENCLASSROOM SUR RegEX
+
+    input.oninput = () => {
+        if (input.value.length >= minLength && hasTwoDigits.test(input.value)) {
+            validity.innerHTML = 'ok';
+        } else validity.innerHTML = 'Pas ok';
+    };
 })();
+
+/* aller voir sur RegX Online */
