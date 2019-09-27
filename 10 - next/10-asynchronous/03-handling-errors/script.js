@@ -11,18 +11,15 @@
 
 (() => {
     document.getElementById("run").addEventListener('click', () => {
-        window.lib.getPersons((error, persons) => {
+        /*  window.  */
+        lib.getPersons((error, persons) => {
+            /*  on est pas obligé de mettre "window" devant */
 
-            if (error == null) {
-                console.log(persons)
-            } else {
-                console.error(error)
-            };
-
-
+            if (error) {
+                console.error(error);
+                return; /* car on utilise pas de else à la suite du if, il faut mettre un return pour arrêter l'execution de la fonction */
+            }
+            console.log(persons);
         });
-
     });
-
-
 })();

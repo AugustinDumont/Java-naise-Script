@@ -41,23 +41,9 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        window.lib.getPosts(callBack);
+        window.lib.getPosts((err, posts)=>{
+            console.log(posts)
+        });
     });
 
-    function callBack(error, tableau) {
-        console.log(tableau);
-    }
-
 })();
-
-
-// ou 
-
-/* document.getElementById("run").addEventListener("click", () => {
-    window.lib.getPosts(function(error,tableau));
-    console.log(tableau);
-
-    if(error !== null){
-        console.log(error)
-    };
- */

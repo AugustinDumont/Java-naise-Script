@@ -10,5 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", async () => {
+        const articles = await window.lib.getPosts();
+        console.log(articles);
+    });
+
 })();
+
+/*  Comapraison avec exercice 4
+
+(() => {
+    document.getElementById("run").addEventListener("click", function () {
+        window.lib.getPosts().then(function (articles) {
+            console.table(articles);
+        }, null);
+    });
+})(); */
+
+/* const articles = je récupères mes articles. Action qui demande un certain temps. J'attends de récupérer mes articles avant de passer au reste. */

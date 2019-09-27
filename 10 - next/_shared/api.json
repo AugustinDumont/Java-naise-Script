@@ -4,13 +4,20 @@
       "id": 1,
       "name": "Cyclops",
       "alterEgo": "Scott Summers",
-      "abilities": ["Optic force blasts", "Master tactician"]
+      "abilities": [
+        "Optic force blasts",
+        "Master tactician"
+      ]
     },
     {
       "id": 2,
       "name": "Marvel Girl",
       "alterEgo": "Jean Grey",
-      "abilities": ["Telekinesis", "Telepathy", "Astral projection"]
+      "abilities": [
+        "Telekinesis",
+        "Telepathy",
+        "Astral projection"
+      ]
     },
     {
       "id": 3,
@@ -39,6 +46,131 @@
         "Cold and ice manipulation",
         "Ability to assume an enhanced physical form made of solid ice"
       ]
+    },
+    {
+      "name": "QDFF",
+      "alterEgo": "qDF",
+      "abilities": [
+        "Qsf"
+      ],
+      "id": 6
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 7
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 8
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 9
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 10
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 11
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 12
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 13
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 14
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 15
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 16
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 17
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 18
+    },
+    {
+      "name": "sdvdfsfv",
+      "alterEgo": "wcxv wddv",
+      "abilities": [
+        "dfze",
+        "efze"
+      ],
+      "id": 19
     }
   ]
 }

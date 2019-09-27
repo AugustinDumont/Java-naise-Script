@@ -11,39 +11,50 @@
 
     ns.getPosts = () =>
         ns
-            .wait(1000)
-            .then(() =>
-                Promise.resolve(
-                    Array.from(new Array(utils.getRandomInt(5, 10)).keys()).map(
-                        id => ({id, ...utils.generatePost()}),
-                    ),
+        .wait(1000)    /* getPosts, une fois que 1 sec s'est écoulée, va tenir sa promesse, son resolve : générer le tableau */
+        .then(() =>
+            Promise.resolve(
+                Array.from(new Array(utils.getRandomInt(5, 10)).keys()).map(
+                    id => ({
+                        id,
+                        ...utils.generatePost()
+                    }),
                 ),
-            );
+            ),
+        );
 
     ns.getComments = () =>
         ns
-            .wait(200)
-            .then(() =>
-                Promise.resolve(
-                    Array.from(new Array(utils.getRandomInt(5, 10)).keys()).map(
-                        id => ({id, ...utils.generateComment()}),
-                    ),
+        .wait(200)
+        .then(() =>
+            Promise.resolve(
+                Array.from(new Array(utils.getRandomInt(5, 10)).keys()).map(
+                    id => ({
+                        id,
+                        ...utils.generateComment()
+                    }),
                 ),
-            );
+            ),
+        );
 
     ns.getPersons = () =>
         ns.wait(1000).then(
             () =>
-                new Promise((resolve, reject) => {
-                    if (Math.round(Math.random())) {
-                        reject(new Error("Bad luck!"));
-                        return;
-                    }
-                    resolve(
-                        Array.from(
-                            new Array(utils.getRandomInt(5, 15)).keys(),
-                        ).map(id => ({id, name: utils.generateName()})),
-                    );
-                }),
+            new Promise((resolve, reject) => {
+                if (Math.round(Math.random())) {
+                    reject(new Error("Bad luck!"));
+                    return;
+                }
+                resolve(
+                    Array.from(
+                        new Array(utils.getRandomInt(5, 15)).keys(),
+                    ).map(id => ({
+                        id,
+                        name: utils.generateName()
+                    })),
+                );
+            }),
         );
 })((window.lib = {}), utils);
+
+
